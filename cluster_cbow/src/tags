@@ -1,0 +1,412 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Args	args.cc	/^Args::Args() {$/;"	f	class:fasttext::Args
+Args	args.h	/^class Args {$/;"	c	namespace:fasttext
+BOW	dictionary.cc	/^const std::string Dictionary::BOW = "<";$/;"	m	class:fasttext::Dictionary	file:
+BOW	dictionary.h	/^  static const std::string BOW;$/;"	m	class:fasttext::entry_type::Dictionary
+Dictionary	dictionary.cc	/^Dictionary::Dictionary(std::shared_ptr<Args> args)$/;"	f	class:fasttext::Dictionary
+Dictionary	dictionary.cc	/^Dictionary::Dictionary(std::shared_ptr<Args> args, std::istream& in)$/;"	f	class:fasttext::Dictionary
+Dictionary	dictionary.h	/^class Dictionary {$/;"	c	class:fasttext::entry_type
+EOS	dictionary.cc	/^const std::string Dictionary::EOS = "<\/s>";$/;"	m	class:fasttext::Dictionary	file:
+EOS	dictionary.h	/^  static const std::string EOS;$/;"	m	class:fasttext::entry_type::Dictionary
+EOW	dictionary.cc	/^const std::string Dictionary::EOW = ">";$/;"	m	class:fasttext::Dictionary	file:
+EOW	dictionary.h	/^  static const std::string EOW;$/;"	m	class:fasttext::entry_type::Dictionary
+Estep	productquantizer.cc	/^void ProductQuantizer::Estep($/;"	f	class:fasttext::ProductQuantizer
+FASTTEXT_DEPRECATED	utils.h	16;"	d
+FASTTEXT_DEPRECATED	utils.h	18;"	d
+FASTTEXT_DEPRECATED	utils.h	20;"	d
+FASTTEXT_FILEFORMAT_MAGIC_INT32	fasttext.cc	/^constexpr int32_t FASTTEXT_FILEFORMAT_MAGIC_INT32 = 793712314;$/;"	m	namespace:fasttext	file:
+FASTTEXT_VERSION	fasttext.cc	/^constexpr int32_t FASTTEXT_VERSION = 12; \/* Version 1b *\/$/;"	m	namespace:fasttext	file:
+FastText	fasttext.cc	/^FastText::FastText() : quant_(false), wordVectors_(nullptr) {}$/;"	f	class:fasttext::FastText
+FastText	fasttext.h	/^class FastText {$/;"	c	namespace:fasttext
+LOG_TABLE_SIZE	model.cc	/^constexpr int64_t LOG_TABLE_SIZE = 512;$/;"	m	namespace:fasttext	file:
+MAX_LINE_SIZE	dictionary.h	/^  static const int32_t MAX_LINE_SIZE = 1024;$/;"	m	class:fasttext::entry_type::Dictionary
+MAX_SIGMOID	model.cc	/^constexpr int64_t MAX_SIGMOID = 8;$/;"	m	namespace:fasttext	file:
+MAX_VOCAB_SIZE	dictionary.h	/^  static const int32_t MAX_VOCAB_SIZE = 30000000;$/;"	m	class:fasttext::entry_type::Dictionary
+MStep	productquantizer.cc	/^void ProductQuantizer::MStep($/;"	f	class:fasttext::ProductQuantizer
+Matrix	matrix.cc	/^Matrix::Matrix() : Matrix(0, 0) {}$/;"	f	class:fasttext::Matrix
+Matrix	matrix.cc	/^Matrix::Matrix(int64_t m, int64_t n) : data_(m * n), m_(m), n_(n) {}$/;"	f	class:fasttext::Matrix
+Matrix	matrix.h	/^class Matrix {$/;"	c	namespace:fasttext
+Meter	meter.h	/^  Meter() : metrics_(), nexamples_(0), labelMetrics_() {}$/;"	f	class:fasttext::Meter
+Meter	meter.h	/^class Meter {$/;"	c	namespace:fasttext
+Metrics	meter.h	/^    Metrics() : gold(0), predicted(0), predictedGold(0) {}$/;"	f	struct:fasttext::Meter::Metrics
+Metrics	meter.h	/^  struct Metrics {$/;"	s	class:fasttext::Meter
+Model	model.cc	/^Model::Model($/;"	f	class:fasttext::Model
+Model	model.h	/^class Model {$/;"	c	namespace:fasttext
+NEGATIVE_TABLE_SIZE	model.h	/^  static const int32_t NEGATIVE_TABLE_SIZE = 10000000;$/;"	m	class:fasttext::Model
+Node	model.h	/^struct Node {$/;"	s	namespace:fasttext
+ProductQuantizer	productquantizer.cc	/^ProductQuantizer::ProductQuantizer(int32_t dim, int32_t dsub)$/;"	f	class:fasttext::ProductQuantizer
+ProductQuantizer	productquantizer.h	/^  ProductQuantizer() {}$/;"	f	class:fasttext::ProductQuantizer
+ProductQuantizer	productquantizer.h	/^class ProductQuantizer {$/;"	c	namespace:fasttext
+QMatrix	qmatrix.cc	/^QMatrix::QMatrix() : qnorm_(false), m_(0), n_(0), codesize_(0) {}$/;"	f	class:fasttext::QMatrix
+QMatrix	qmatrix.cc	/^QMatrix::QMatrix(const Matrix& mat, int32_t dsub, bool qnorm)$/;"	f	class:fasttext::QMatrix
+QMatrix	qmatrix.h	/^class QMatrix {$/;"	c	namespace:fasttext
+SIGMOID_TABLE_SIZE	model.cc	/^constexpr int64_t SIGMOID_TABLE_SIZE = 512;$/;"	m	namespace:fasttext	file:
+Vector	vector.cc	/^Vector::Vector(int64_t m) : data_(m) {}$/;"	f	class:fasttext::Vector
+Vector	vector.h	/^class Vector {$/;"	c	namespace:fasttext
+add	dictionary.cc	/^void Dictionary::add(const std::string& w) {$/;"	f	class:fasttext::Dictionary
+addInputVector	fasttext.cc	/^void FastText::addInputVector(Vector& vec, int32_t ind) const {$/;"	f	class:fasttext::FastText
+addRow	matrix.cc	/^void Matrix::addRow(const Vector& vec, int64_t i, real a) {$/;"	f	class:fasttext::Matrix
+addRow	vector.cc	/^void Vector::addRow(const Matrix& A, int64_t i) {$/;"	f	class:fasttext::Vector
+addRow	vector.cc	/^void Vector::addRow(const Matrix& A, int64_t i, real a) {$/;"	f	class:fasttext::Vector
+addRow	vector.cc	/^void Vector::addRow(const QMatrix& A, int64_t i) {$/;"	f	class:fasttext::Vector
+addSubwords	dictionary.cc	/^void Dictionary::addSubwords($/;"	f	class:fasttext::Dictionary
+addToVector	qmatrix.cc	/^void QMatrix::addToVector(Vector& x, int32_t t) const {$/;"	f	class:fasttext::QMatrix
+addVector	vector.cc	/^void Vector::addVector(const Vector& source) {$/;"	f	class:fasttext::Vector
+addVector	vector.cc	/^void Vector::addVector(const Vector& source, real s) {$/;"	f	class:fasttext::Vector
+addWordNgrams	dictionary.cc	/^void Dictionary::addWordNgrams($/;"	f	class:fasttext::Dictionary
+addcode	productquantizer.cc	/^void ProductQuantizer::addcode($/;"	f	class:fasttext::ProductQuantizer
+analogies	fasttext.cc	/^void FastText::analogies(int32_t k) {$/;"	f	class:fasttext::FastText
+analogies	main.cc	/^void analogies(const std::vector<std::string> args) {$/;"	f
+argmax	vector.cc	/^int64_t Vector::argmax() {$/;"	f	class:fasttext::Vector
+args_	dictionary.h	/^  std::shared_ptr<Args> args_;$/;"	m	class:fasttext::entry_type::Dictionary
+args_	fasttext.h	/^  std::shared_ptr<Args> args_;$/;"	m	class:fasttext::FastText
+args_	model.h	/^  std::shared_ptr<Args> args_;$/;"	m	class:fasttext::Model
+assign_centroid	productquantizer.cc	/^real ProductQuantizer::assign_centroid($/;"	f	class:fasttext::ProductQuantizer
+at	matrix.h	/^  inline const real& at(int64_t i, int64_t j) const {$/;"	f	class:fasttext::Matrix
+at	matrix.h	/^  inline real& at(int64_t i, int64_t j) {$/;"	f	class:fasttext::Matrix
+binary	model.h	/^  bool binary;$/;"	m	struct:fasttext::Node
+binaryLogistic	model.cc	/^real Model::binaryLogistic(int32_t target, bool label, real lr) {$/;"	f	class:fasttext::Model
+boolToString	args.cc	/^std::string Args::boolToString(bool b) const {$/;"	f	class:fasttext::Args
+bucket	args.h	/^  int bucket;$/;"	m	class:fasttext::Args
+buildTree	model.cc	/^void Model::buildTree(const std::vector<int64_t>& counts) {$/;"	f	class:fasttext::Model
+cbow	args.h	/^enum class model_name : int { cbow = 1, sg, sup };$/;"	m	class:fasttext::model_name
+cbow	fasttext.cc	/^void FastText::cbow(Model& model, real lr, const std::vector<int32_t>& line) {$/;"	f	class:fasttext::FastText
+centroids_	productquantizer.h	/^  std::vector<real> centroids_;$/;"	m	class:fasttext::ProductQuantizer
+checkModel	fasttext.cc	/^bool FastText::checkModel(std::istream& in) {$/;"	f	class:fasttext::FastText
+codes	model.h	/^  std::vector<std::vector<bool>> codes;$/;"	m	class:fasttext::Model
+codes_	qmatrix.h	/^  std::vector<uint8_t> codes_;$/;"	m	class:fasttext::QMatrix
+codesize_	qmatrix.h	/^  int32_t codesize_;$/;"	m	class:fasttext::QMatrix
+cols	matrix.h	/^  inline int64_t cols() const {$/;"	f	class:fasttext::Matrix
+comparePairs	fasttext.cc	/^bool comparePairs($/;"	f	namespace:fasttext
+comparePairs	model.cc	/^bool Model::comparePairs($/;"	f	class:fasttext::Model
+computeHidden	model.cc	/^void Model::computeHidden(const std::vector<int32_t>& input, Vector& hidden)$/;"	f	class:fasttext::Model
+computeLoss	model.cc	/^real Model::computeLoss($/;"	f	class:fasttext::Model
+computeOutput	model.cc	/^void Model::computeOutput(Vector& hidden, Vector& output) const {$/;"	f	class:fasttext::Model
+computeOutputSigmoid	model.cc	/^void Model::computeOutputSigmoid(Vector& hidden, Vector& output) const {$/;"	f	class:fasttext::Model
+computeOutputSoftmax	model.cc	/^void Model::computeOutputSoftmax() {$/;"	f	class:fasttext::Model
+computeOutputSoftmax	model.cc	/^void Model::computeOutputSoftmax(Vector& hidden, Vector& output) const {$/;"	f	class:fasttext::Model
+computeSubwords	dictionary.cc	/^void Dictionary::computeSubwords($/;"	f	class:fasttext::Dictionary
+compute_code	productquantizer.cc	/^void ProductQuantizer::compute_code(const real* x, uint8_t* code) const {$/;"	f	class:fasttext::ProductQuantizer
+compute_codes	productquantizer.cc	/^void ProductQuantizer::compute_codes(const real* x, uint8_t* codes, int32_t n)$/;"	f	class:fasttext::ProductQuantizer
+contains	utils.h	/^bool contains(const std::vector<T>& container, const T& value) {$/;"	f	namespace:fasttext::utils
+count	dictionary.h	/^  int64_t count;$/;"	m	struct:fasttext::entry_type::entry
+count	model.h	/^  int64_t count;$/;"	m	struct:fasttext::Node
+cutoff	args.h	/^  size_t cutoff;$/;"	m	class:fasttext::Args
+data	matrix.h	/^  inline const real* data() const {$/;"	f	class:fasttext::Matrix
+data	matrix.h	/^  inline real* data() {$/;"	f	class:fasttext::Matrix
+data	vector.h	/^  inline const real* data() const {$/;"	f	class:fasttext::Vector
+data	vector.h	/^  inline real* data() {$/;"	f	class:fasttext::Vector
+data_	matrix.h	/^  std::vector<real> data_;$/;"	m	class:fasttext::Matrix
+data_	vector.h	/^  std::vector<real> data_;$/;"	m	class:fasttext::Vector
+dfs	model.cc	/^void Model::dfs($/;"	f	class:fasttext::Model
+dict_	fasttext.h	/^  std::shared_ptr<Dictionary> dict_;$/;"	m	class:fasttext::FastText
+dim	args.h	/^  int dim;$/;"	m	class:fasttext::Args
+dim_	productquantizer.h	/^  int32_t dim_;$/;"	m	class:fasttext::ProductQuantizer
+discard	dictionary.cc	/^bool Dictionary::discard(int32_t id, real rand) const {$/;"	f	class:fasttext::Dictionary
+distL2	productquantizer.cc	/^real distL2(const real* x, const real* y, int32_t d) {$/;"	f	namespace:fasttext
+divideRow	matrix.cc	/^void Matrix::divideRow(const Vector& denoms, int64_t ib, int64_t ie) {$/;"	f	class:fasttext::Matrix
+dotRow	matrix.cc	/^real Matrix::dotRow(const Vector& vec, int64_t i) const {$/;"	f	class:fasttext::Matrix
+dotRow	qmatrix.cc	/^real QMatrix::dotRow(const Vector& vec, int64_t i) const {$/;"	f	class:fasttext::QMatrix
+dsub	args.h	/^  size_t dsub;$/;"	m	class:fasttext::Args
+dsub_	productquantizer.h	/^  int32_t dsub_;$/;"	m	class:fasttext::ProductQuantizer
+dump	args.cc	/^void Args::dump(std::ostream& out) const {$/;"	f	class:fasttext::Args
+dump	dictionary.cc	/^void Dictionary::dump(std::ostream& out) const {$/;"	f	class:fasttext::Dictionary
+dump	main.cc	/^void dump(const std::vector<std::string>& args) {$/;"	f
+dump	matrix.cc	/^void Matrix::dump(std::ostream& out) const {$/;"	f	class:fasttext::Matrix
+entry	dictionary.h	/^struct entry {$/;"	s	class:fasttext::entry_type
+entry_type	dictionary.h	/^enum class entry_type : int8_t { word = 0, label = 1 };$/;"	c	namespace:fasttext
+epoch	args.h	/^  int epoch;$/;"	m	class:fasttext::Args
+eps_	productquantizer.h	/^  const real eps_ = 1e-7;$/;"	m	class:fasttext::ProductQuantizer
+f1Score	meter.cc	/^double Meter::f1Score(int32_t i) {$/;"	f	class:fasttext::Meter
+f1Score	meter.h	/^    double f1Score() const {$/;"	f	struct:fasttext::Meter::Metrics
+fasttext	args.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	args.h	/^namespace fasttext {$/;"	n
+fasttext	dictionary.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	dictionary.h	/^namespace fasttext {$/;"	n
+fasttext	fasttext.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	fasttext.h	/^namespace fasttext {$/;"	n
+fasttext	matrix.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	matrix.h	/^namespace fasttext {$/;"	n
+fasttext	meter.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	meter.h	/^namespace fasttext {$/;"	n
+fasttext	model.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	model.h	/^namespace fasttext {$/;"	n
+fasttext	productquantizer.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	productquantizer.h	/^namespace fasttext {$/;"	n
+fasttext	qmatrix.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	qmatrix.h	/^namespace fasttext {$/;"	n
+fasttext	real.h	/^namespace fasttext {$/;"	n
+fasttext	utils.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	utils.h	/^namespace fasttext {$/;"	n
+fasttext	vector.cc	/^namespace fasttext {$/;"	n	file:
+fasttext	vector.h	/^namespace fasttext {$/;"	n
+find	dictionary.cc	/^int32_t Dictionary::find(const std::string& w) const {$/;"	f	class:fasttext::Dictionary
+find	dictionary.cc	/^int32_t Dictionary::find(const std::string& w, uint32_t h) const {$/;"	f	class:fasttext::Dictionary
+findKBest	model.cc	/^void Model::findKBest($/;"	f	class:fasttext::Model
+findNN	fasttext.cc	/^void FastText::findNN($/;"	f	class:fasttext::FastText
+getAnalogies	fasttext.cc	/^std::vector<std::pair<real, std::string>> FastText::getAnalogies($/;"	f	class:fasttext::FastText
+getArgs	fasttext.cc	/^const Args FastText::getArgs() const {$/;"	f	class:fasttext::FastText
+getCounts	dictionary.cc	/^std::vector<int64_t> Dictionary::getCounts(entry_type type) const {$/;"	f	class:fasttext::Dictionary
+getDictionary	fasttext.cc	/^std::shared_ptr<const Dictionary> FastText::getDictionary() const {$/;"	f	class:fasttext::FastText
+getDimension	fasttext.cc	/^int FastText::getDimension() const {$/;"	f	class:fasttext::FastText
+getId	dictionary.cc	/^int32_t Dictionary::getId(const std::string& w) const {$/;"	f	class:fasttext::Dictionary
+getId	dictionary.cc	/^int32_t Dictionary::getId(const std::string& w, uint32_t h) const {$/;"	f	class:fasttext::Dictionary
+getInputMatrix	fasttext.cc	/^std::shared_ptr<const Matrix> FastText::getInputMatrix() const {$/;"	f	class:fasttext::FastText
+getInputVector	fasttext.h	/^  inline void getInputVector(Vector& vec, int32_t ind) {$/;"	f	class:fasttext::FastText
+getLabel	dictionary.cc	/^std::string Dictionary::getLabel(int32_t lid) const {$/;"	f	class:fasttext::Dictionary
+getLine	dictionary.cc	/^int32_t Dictionary::getLine($/;"	f	class:fasttext::Dictionary
+getLoss	model.cc	/^real Model::getLoss() const {$/;"	f	class:fasttext::Model
+getM	qmatrix.cc	/^int64_t QMatrix::getM() const {$/;"	f	class:fasttext::QMatrix
+getN	qmatrix.cc	/^int64_t QMatrix::getN() const {$/;"	f	class:fasttext::QMatrix
+getNN	fasttext.cc	/^std::vector<std::pair<real, std::string>> FastText::getNN($/;"	f	class:fasttext::FastText
+getNegative	model.cc	/^int32_t Model::getNegative(int32_t target) {$/;"	f	class:fasttext::Model
+getNgramVectors	fasttext.cc	/^std::vector<std::pair<std::string, Vector>> FastText::getNgramVectors($/;"	f	class:fasttext::FastText
+getOutputMatrix	fasttext.cc	/^std::shared_ptr<const Matrix> FastText::getOutputMatrix() const {$/;"	f	class:fasttext::FastText
+getSentenceVector	fasttext.cc	/^void FastText::getSentenceVector(std::istream& in, fasttext::Vector& svec) {$/;"	f	class:fasttext::FastText
+getSubwordId	fasttext.cc	/^int32_t FastText::getSubwordId(const std::string& subword) const {$/;"	f	class:fasttext::FastText
+getSubwordVector	fasttext.cc	/^void FastText::getSubwordVector(Vector& vec, const std::string& subword) const {$/;"	f	class:fasttext::FastText
+getSubwords	dictionary.cc	/^const std::vector<int32_t> Dictionary::getSubwords($/;"	f	class:fasttext::Dictionary
+getSubwords	dictionary.cc	/^const std::vector<int32_t>& Dictionary::getSubwords(int32_t i) const {$/;"	f	class:fasttext::Dictionary
+getSubwords	dictionary.cc	/^void Dictionary::getSubwords($/;"	f	class:fasttext::Dictionary
+getType	dictionary.cc	/^entry_type Dictionary::getType(const std::string& w) const {$/;"	f	class:fasttext::Dictionary
+getType	dictionary.cc	/^entry_type Dictionary::getType(int32_t id) const {$/;"	f	class:fasttext::Dictionary
+getVector	fasttext.cc	/^void FastText::getVector(Vector& vec, const std::string& word) const {$/;"	f	class:fasttext::FastText
+getWord	dictionary.cc	/^std::string Dictionary::getWord(int32_t id) const {$/;"	f	class:fasttext::Dictionary
+getWordId	fasttext.cc	/^int32_t FastText::getWordId(const std::string& word) const {$/;"	f	class:fasttext::FastText
+getWordVector	fasttext.cc	/^void FastText::getWordVector(Vector& vec, const std::string& word) const {$/;"	f	class:fasttext::FastText
+get_centroids	productquantizer.cc	/^const real* ProductQuantizer::get_centroids(int32_t m, uint8_t i) const {$/;"	f	class:fasttext::ProductQuantizer
+get_centroids	productquantizer.cc	/^real* ProductQuantizer::get_centroids(int32_t m, uint8_t i) {$/;"	f	class:fasttext::ProductQuantizer
+gold	meter.h	/^    uint64_t gold;$/;"	m	struct:fasttext::Meter::Metrics
+grad_	model.h	/^  Vector grad_;$/;"	m	class:fasttext::Model
+hash	dictionary.cc	/^uint32_t Dictionary::hash(const std::string& str) const {$/;"	f	class:fasttext::Dictionary
+hidden_	model.h	/^  Vector hidden_;$/;"	m	class:fasttext::Model
+hierarchicalSoftmax	model.cc	/^real Model::hierarchicalSoftmax(int32_t target, real lr) {$/;"	f	class:fasttext::Model
+hs	args.h	/^enum class loss_name : int { hs = 1, ns, softmax, ova };$/;"	m	class:fasttext::loss_name
+hsz_	model.h	/^  int32_t hsz_;$/;"	m	class:fasttext::Model
+id_type	dictionary.h	/^typedef int32_t id_type;$/;"	t	namespace:fasttext
+init	dictionary.cc	/^void Dictionary::init() {$/;"	f	class:fasttext::Dictionary
+initLog	model.cc	/^void Model::initLog() {$/;"	f	class:fasttext::Model
+initNgrams	dictionary.cc	/^void Dictionary::initNgrams() {$/;"	f	class:fasttext::Dictionary
+initSigmoid	model.cc	/^void Model::initSigmoid() {$/;"	f	class:fasttext::Model
+initTableDiscard	dictionary.cc	/^void Dictionary::initTableDiscard() {$/;"	f	class:fasttext::Dictionary
+initTableNegatives	model.cc	/^void Model::initTableNegatives(const std::vector<int64_t>& counts) {$/;"	f	class:fasttext::Model
+input	args.h	/^  std::string input;$/;"	m	class:fasttext::Args
+input_	fasttext.h	/^  std::shared_ptr<Matrix> input_;$/;"	m	class:fasttext::FastText
+isPruned	dictionary.h	/^  bool isPruned() {$/;"	f	class:fasttext::entry_type::Dictionary
+isQuant	fasttext.cc	/^bool FastText::isQuant() const {$/;"	f	class:fasttext::FastText
+kAllLabelsAsTarget	model.h	/^  static const int32_t kAllLabelsAsTarget = -1;$/;"	m	class:fasttext::Model
+kUnlimitedPredictions	model.h	/^  static const int32_t kUnlimitedPredictions = -1;$/;"	m	class:fasttext::Model
+kmeans	productquantizer.cc	/^void ProductQuantizer::kmeans(const real* x, real* c, int32_t n, int32_t d) {$/;"	f	class:fasttext::ProductQuantizer
+ksub_	productquantizer.h	/^  const int32_t ksub_ = 1 << nbits_;$/;"	m	class:fasttext::ProductQuantizer
+l2NormRow	matrix.cc	/^real Matrix::l2NormRow(int64_t i) const {$/;"	f	class:fasttext::Matrix
+l2NormRow	matrix.cc	/^void Matrix::l2NormRow(Vector& norms) const {$/;"	f	class:fasttext::Matrix
+label	args.h	/^  std::string label;$/;"	m	class:fasttext::Args
+label	dictionary.h	/^enum class entry_type : int8_t { word = 0, label = 1 };$/;"	m	class:fasttext::entry_type
+labelMetrics_	meter.h	/^  std::unordered_map<int32_t, Metrics> labelMetrics_;$/;"	m	class:fasttext::Meter
+lastdsub_	productquantizer.h	/^  int32_t lastdsub_;$/;"	m	class:fasttext::ProductQuantizer
+lazyComputeWordVectors	fasttext.cc	/^void FastText::lazyComputeWordVectors() {$/;"	f	class:fasttext::FastText
+left	model.h	/^  int32_t left;$/;"	m	struct:fasttext::Node
+load	args.cc	/^void Args::load(std::istream& in) {$/;"	f	class:fasttext::Args
+load	dictionary.cc	/^void Dictionary::load(std::istream& in) {$/;"	f	class:fasttext::Dictionary
+load	matrix.cc	/^void Matrix::load(std::istream& in) {$/;"	f	class:fasttext::Matrix
+load	productquantizer.cc	/^void ProductQuantizer::load(std::istream& in) {$/;"	f	class:fasttext::ProductQuantizer
+load	qmatrix.cc	/^void QMatrix::load(std::istream& in) {$/;"	f	class:fasttext::QMatrix
+loadModel	fasttext.cc	/^void FastText::loadModel(const std::string& filename) {$/;"	f	class:fasttext::FastText
+loadModel	fasttext.cc	/^void FastText::loadModel(std::istream& in) {$/;"	f	class:fasttext::FastText
+loadVectors	fasttext.cc	/^void FastText::loadVectors(const std::string& filename) {$/;"	f	class:fasttext::FastText
+log	meter.cc	/^void Meter::log($/;"	f	class:fasttext::Meter
+log	model.cc	/^real Model::log(real x) const {$/;"	f	class:fasttext::Model
+loss	args.h	/^  loss_name loss;$/;"	m	class:fasttext::Args
+lossToString	args.cc	/^std::string Args::lossToString(loss_name ln) const {$/;"	f	class:fasttext::Args
+loss_	model.h	/^  real loss_;$/;"	m	class:fasttext::Model
+loss_name	args.h	/^enum class loss_name : int { hs = 1, ns, softmax, ova };$/;"	c	namespace:fasttext
+lr	args.h	/^  double lr;$/;"	m	class:fasttext::Args
+lrUpdateRate	args.h	/^  int lrUpdateRate;$/;"	m	class:fasttext::Args
+m_	matrix.h	/^  const int64_t m_;$/;"	m	class:fasttext::Matrix
+m_	qmatrix.h	/^  int64_t m_;$/;"	m	class:fasttext::QMatrix
+main	main.cc	/^int main(int argc, char** argv) {$/;"	f
+max_points_	productquantizer.h	/^  const int32_t max_points_ = max_points_per_cluster_ * ksub_;$/;"	m	class:fasttext::ProductQuantizer
+max_points_per_cluster_	productquantizer.h	/^  const int32_t max_points_per_cluster_ = 256;$/;"	m	class:fasttext::ProductQuantizer
+maxn	args.h	/^  int maxn;$/;"	m	class:fasttext::Args
+minCount	args.h	/^  int minCount;$/;"	m	class:fasttext::Args
+minCountLabel	args.h	/^  int minCountLabel;$/;"	m	class:fasttext::Args
+minn	args.h	/^  int minn;$/;"	m	class:fasttext::Args
+model	args.h	/^  model_name model;$/;"	m	class:fasttext::Args
+modelToString	args.cc	/^std::string Args::modelToString(model_name mn) const {$/;"	f	class:fasttext::Args
+model_	fasttext.h	/^  std::shared_ptr<Model> model_;$/;"	m	class:fasttext::FastText
+model_name	args.h	/^enum class model_name : int { cbow = 1, sg, sup };$/;"	c	namespace:fasttext
+move	vector.cc	/^Vector::Vector(Vector&& other) noexcept : data_(std::move(other.data_)) {}$/;"	f	namespace:fasttext
+mul	vector.cc	/^void Vector::mul(const Matrix& A, const Vector& vec) {$/;"	f	class:fasttext::Vector
+mul	vector.cc	/^void Vector::mul(const QMatrix& A, const Vector& vec) {$/;"	f	class:fasttext::Vector
+mul	vector.cc	/^void Vector::mul(real a) {$/;"	f	class:fasttext::Vector
+mulcode	productquantizer.cc	/^real ProductQuantizer::mulcode($/;"	f	class:fasttext::ProductQuantizer
+multiplyRow	matrix.cc	/^void Matrix::multiplyRow(const Vector& nums, int64_t ib, int64_t ie) {$/;"	f	class:fasttext::Matrix
+n_	matrix.h	/^  const int64_t n_;$/;"	m	class:fasttext::Matrix
+n_	qmatrix.h	/^  int64_t n_;$/;"	m	class:fasttext::QMatrix
+nbits_	productquantizer.h	/^  const int32_t nbits_ = 8;$/;"	m	class:fasttext::ProductQuantizer
+neg	args.h	/^  int neg;$/;"	m	class:fasttext::Args
+negativeSampling	model.cc	/^real Model::negativeSampling(int32_t target, real lr) {$/;"	f	class:fasttext::Model
+negatives_	model.h	/^  std::vector<int32_t> negatives_;$/;"	m	class:fasttext::Model
+negpos	model.h	/^  size_t negpos;$/;"	m	class:fasttext::Model
+nexamples	meter.h	/^  uint64_t nexamples() const {$/;"	f	class:fasttext::Meter
+nexamples_	meter.h	/^  uint64_t nexamples_;$/;"	m	class:fasttext::Meter
+nexamples_	model.h	/^  int64_t nexamples_;$/;"	m	class:fasttext::Model
+ngramVectors	fasttext.cc	/^void FastText::ngramVectors(std::string word) {$/;"	f	class:fasttext::FastText
+niter_	productquantizer.h	/^  const int32_t niter_ = 25;$/;"	m	class:fasttext::ProductQuantizer
+nlabels	dictionary.cc	/^int32_t Dictionary::nlabels() const {$/;"	f	class:fasttext::Dictionary
+nlabels_	dictionary.h	/^  int32_t nlabels_;$/;"	m	class:fasttext::entry_type::Dictionary
+nn	main.cc	/^void nn(const std::vector<std::string> args) {$/;"	f
+noexcept	vector.h	/^  Vector(Vector&&) noexcept;$/;"	m	class:fasttext::Vector
+norm	vector.cc	/^real Vector::norm() const {$/;"	f	class:fasttext::Vector
+norm_codes_	qmatrix.h	/^  std::vector<uint8_t> norm_codes_;$/;"	m	class:fasttext::QMatrix
+npq_	qmatrix.h	/^  std::unique_ptr<ProductQuantizer> npq_;$/;"	m	class:fasttext::QMatrix
+ns	args.h	/^enum class loss_name : int { hs = 1, ns, softmax, ova };$/;"	m	class:fasttext::loss_name
+nsubq_	productquantizer.h	/^  int32_t nsubq_;$/;"	m	class:fasttext::ProductQuantizer
+ntokens	dictionary.cc	/^int64_t Dictionary::ntokens() const {$/;"	f	class:fasttext::Dictionary
+ntokens_	dictionary.h	/^  int64_t ntokens_;$/;"	m	class:fasttext::entry_type::Dictionary
+nwords	dictionary.cc	/^int32_t Dictionary::nwords() const {$/;"	f	class:fasttext::Dictionary
+nwords_	dictionary.h	/^  int32_t nwords_;$/;"	m	class:fasttext::entry_type::Dictionary
+oneVsAll	model.cc	/^real Model::oneVsAll(const std::vector<int32_t>& targets, real lr) {$/;"	f	class:fasttext::Model
+operator <<	vector.cc	/^std::ostream& operator<<(std::ostream& os, const Vector& v) {$/;"	f	namespace:fasttext
+operator =	vector.cc	/^Vector& Vector::operator=(Vector&& other) {$/;"	f	class:fasttext::Vector
+operator []	vector.h	/^  inline const real& operator[](int64_t i) const {$/;"	f	class:fasttext::Vector
+operator []	vector.h	/^  inline real& operator[](int64_t i) {$/;"	f	class:fasttext::Vector
+osz_	model.h	/^  int32_t osz_;$/;"	m	class:fasttext::Model
+output	args.h	/^  std::string output;$/;"	m	class:fasttext::Args
+output_	fasttext.h	/^  std::shared_ptr<Matrix> output_;$/;"	m	class:fasttext::FastText
+output_	model.h	/^  Vector output_;$/;"	m	class:fasttext::Model
+parent	model.h	/^  int32_t parent;$/;"	m	struct:fasttext::Node
+parseArgs	args.cc	/^void Args::parseArgs(const std::vector<std::string>& args) {$/;"	f	class:fasttext::Args
+paths	model.h	/^  std::vector<std::vector<int32_t>> paths;$/;"	m	class:fasttext::Model
+pdiscard_	dictionary.h	/^  std::vector<real> pdiscard_;$/;"	m	class:fasttext::entry_type::Dictionary
+pq_	qmatrix.h	/^  std::unique_ptr<ProductQuantizer> pq_;$/;"	m	class:fasttext::QMatrix
+precision	meter.cc	/^double Meter::precision() const {$/;"	f	class:fasttext::Meter
+precision	meter.cc	/^double Meter::precision(int32_t i) {$/;"	f	class:fasttext::Meter
+precision	meter.h	/^    double precision() const {$/;"	f	struct:fasttext::Meter::Metrics
+precomputeWordVectors	fasttext.cc	/^void FastText::precomputeWordVectors(Matrix& wordVectors) {$/;"	f	class:fasttext::FastText
+predict	fasttext.cc	/^void FastText::predict($/;"	f	class:fasttext::FastText
+predict	main.cc	/^void predict(const std::vector<std::string>& args) {$/;"	f
+predict	model.cc	/^void Model::predict($/;"	f	class:fasttext::Model
+predictLine	fasttext.cc	/^bool FastText::predictLine($/;"	f	class:fasttext::FastText
+predicted	meter.h	/^    uint64_t predicted;$/;"	m	struct:fasttext::Meter::Metrics
+predictedGold	meter.h	/^    uint64_t predictedGold;$/;"	m	struct:fasttext::Meter::Metrics
+pretrainedVectors	args.h	/^  std::string pretrainedVectors;$/;"	m	class:fasttext::Args
+printAnalogiesUsage	main.cc	/^void printAnalogiesUsage() {$/;"	f
+printBasicHelp	args.cc	/^void Args::printBasicHelp() {$/;"	f	class:fasttext::Args
+printDictionaryHelp	args.cc	/^void Args::printDictionaryHelp() {$/;"	f	class:fasttext::Args
+printDumpUsage	main.cc	/^void printDumpUsage() {$/;"	f
+printHelp	args.cc	/^void Args::printHelp() {$/;"	f	class:fasttext::Args
+printInfo	fasttext.cc	/^void FastText::printInfo(real progress, real loss, std::ostream& log_stream) {$/;"	f	class:fasttext::FastText
+printNNUsage	main.cc	/^void printNNUsage() {$/;"	f
+printNgrams	main.cc	/^void printNgrams(const std::vector<std::string> args) {$/;"	f
+printPredictUsage	main.cc	/^void printPredictUsage() {$/;"	f
+printPredictions	main.cc	/^void printPredictions($/;"	f
+printPrintNgramsUsage	main.cc	/^void printPrintNgramsUsage() {$/;"	f
+printPrintSentenceVectorsUsage	main.cc	/^void printPrintSentenceVectorsUsage() {$/;"	f
+printPrintWordVectorsUsage	main.cc	/^void printPrintWordVectorsUsage() {$/;"	f
+printQuantizationHelp	args.cc	/^void Args::printQuantizationHelp() {$/;"	f	class:fasttext::Args
+printQuantizeUsage	main.cc	/^void printQuantizeUsage() {$/;"	f
+printSentenceVectors	main.cc	/^void printSentenceVectors(const std::vector<std::string> args) {$/;"	f
+printTestLabelUsage	main.cc	/^void printTestLabelUsage() {$/;"	f
+printTestUsage	main.cc	/^void printTestUsage() {$/;"	f
+printTrainingHelp	args.cc	/^void Args::printTrainingHelp() {$/;"	f	class:fasttext::Args
+printUsage	main.cc	/^void printUsage() {$/;"	f
+printWordVectors	main.cc	/^void printWordVectors(const std::vector<std::string> args) {$/;"	f
+prune	dictionary.cc	/^void Dictionary::prune(std::vector<int32_t>& idx) {$/;"	f	class:fasttext::Dictionary
+pruneidx_	dictionary.h	/^  std::unordered_map<int32_t, int32_t> pruneidx_;$/;"	m	class:fasttext::entry_type::Dictionary
+pruneidx_size_	dictionary.h	/^  int64_t pruneidx_size_;$/;"	m	class:fasttext::entry_type::Dictionary
+pushHash	dictionary.cc	/^void Dictionary::pushHash(std::vector<int32_t>& hashes, int32_t id) const {$/;"	f	class:fasttext::Dictionary
+qinput_	fasttext.h	/^  std::shared_ptr<QMatrix> qinput_;$/;"	m	class:fasttext::FastText
+qnorm	args.h	/^  bool qnorm;$/;"	m	class:fasttext::Args
+qnorm_	qmatrix.h	/^  bool qnorm_;$/;"	m	class:fasttext::QMatrix
+qout	args.h	/^  bool qout;$/;"	m	class:fasttext::Args
+qoutput_	fasttext.h	/^  std::shared_ptr<QMatrix> qoutput_;$/;"	m	class:fasttext::FastText
+quant_	fasttext.h	/^  bool quant_;$/;"	m	class:fasttext::FastText
+quant_	model.h	/^  bool quant_;$/;"	m	class:fasttext::Model
+quantize	fasttext.cc	/^void FastText::quantize(const Args& qargs) {$/;"	f	class:fasttext::FastText
+quantize	main.cc	/^void quantize(const std::vector<std::string>& args) {$/;"	f
+quantize	qmatrix.cc	/^void QMatrix::quantize(const Matrix& matrix) {$/;"	f	class:fasttext::QMatrix
+quantizeNorm	qmatrix.cc	/^void QMatrix::quantizeNorm(const Vector& norms) {$/;"	f	class:fasttext::QMatrix
+qwi_	model.h	/^  std::shared_ptr<QMatrix> qwi_;$/;"	m	class:fasttext::Model
+qwo_	model.h	/^  std::shared_ptr<QMatrix> qwo_;$/;"	m	class:fasttext::Model
+readFromFile	dictionary.cc	/^void Dictionary::readFromFile(std::istream& in) {$/;"	f	class:fasttext::Dictionary
+readWord	dictionary.cc	/^bool Dictionary::readWord(std::istream& in, std::string& word) const {$/;"	f	class:fasttext::Dictionary
+real	real.h	/^typedef float real;$/;"	t	namespace:fasttext
+recall	meter.cc	/^double Meter::recall() const {$/;"	f	class:fasttext::Meter
+recall	meter.cc	/^double Meter::recall(int32_t i) {$/;"	f	class:fasttext::Meter
+recall	meter.h	/^    double recall() const {$/;"	f	struct:fasttext::Meter::Metrics
+reset	dictionary.cc	/^void Dictionary::reset(std::istream& in) const {$/;"	f	class:fasttext::Dictionary
+retrain	args.h	/^  bool retrain;$/;"	m	class:fasttext::Args
+right	model.h	/^  int32_t right;$/;"	m	struct:fasttext::Node
+rng	model.h	/^  std::minstd_rand rng;$/;"	m	class:fasttext::Model
+rng	productquantizer.h	/^  std::minstd_rand rng;$/;"	m	class:fasttext::ProductQuantizer
+rows	matrix.h	/^  inline int64_t rows() const {$/;"	f	class:fasttext::Matrix
+save	args.cc	/^void Args::save(std::ostream& out) {$/;"	f	class:fasttext::Args
+save	dictionary.cc	/^void Dictionary::save(std::ostream& out) const {$/;"	f	class:fasttext::Dictionary
+save	matrix.cc	/^void Matrix::save(std::ostream& out) {$/;"	f	class:fasttext::Matrix
+save	productquantizer.cc	/^void ProductQuantizer::save(std::ostream& out) {$/;"	f	class:fasttext::ProductQuantizer
+save	qmatrix.cc	/^void QMatrix::save(std::ostream& out) {$/;"	f	class:fasttext::QMatrix
+saveModel	fasttext.cc	/^void FastText::saveModel() {$/;"	f	class:fasttext::FastText
+saveModel	fasttext.cc	/^void FastText::saveModel(const std::string& filename) {$/;"	f	class:fasttext::FastText
+saveOutput	args.h	/^  bool saveOutput;$/;"	m	class:fasttext::Args
+saveOutput	fasttext.cc	/^void FastText::saveOutput() {$/;"	f	class:fasttext::FastText
+saveOutput	fasttext.cc	/^void FastText::saveOutput(const std::string& filename) {$/;"	f	class:fasttext::FastText
+saveVectors	fasttext.cc	/^void FastText::saveVectors() {$/;"	f	class:fasttext::FastText
+saveVectors	fasttext.cc	/^void FastText::saveVectors(const std::string& filename) {$/;"	f	class:fasttext::FastText
+seed_	productquantizer.h	/^  const int32_t seed_ = 1234;$/;"	m	class:fasttext::ProductQuantizer
+seek	utils.cc	/^void seek(std::ifstream& ifs, int64_t pos) {$/;"	f	namespace:fasttext::utils
+selectEmbeddings	fasttext.cc	/^std::vector<int32_t> FastText::selectEmbeddings(int32_t cutoff) const {$/;"	f	class:fasttext::FastText
+setQuantizePointer	model.cc	/^void Model::setQuantizePointer($/;"	f	class:fasttext::Model
+setTargetCounts	model.cc	/^void Model::setTargetCounts(const std::vector<int64_t>& counts) {$/;"	f	class:fasttext::Model
+sg	args.h	/^enum class model_name : int { cbow = 1, sg, sup };$/;"	m	class:fasttext::model_name
+sigmoid	model.cc	/^real Model::sigmoid(real x) const {$/;"	f	class:fasttext::Model
+signModel	fasttext.cc	/^void FastText::signModel(std::ostream& out) {$/;"	f	class:fasttext::FastText
+size	matrix.h	/^  inline int64_t size(int64_t dim) const {$/;"	f	class:fasttext::Matrix
+size	utils.cc	/^int64_t size(std::ifstream& ifs) {$/;"	f	namespace:fasttext::utils
+size	vector.h	/^  inline int64_t size() const {$/;"	f	class:fasttext::Vector
+size_	dictionary.h	/^  int32_t size_;$/;"	m	class:fasttext::entry_type::Dictionary
+skipgram	fasttext.cc	/^void FastText::skipgram($/;"	f	class:fasttext::FastText
+softmax	args.h	/^enum class loss_name : int { hs = 1, ns, softmax, ova };$/;"	m	class:fasttext::loss_name
+softmax	model.cc	/^real Model::softmax(int32_t target, real lr) {$/;"	f	class:fasttext::Model
+startThreads	fasttext.cc	/^void FastText::startThreads() {$/;"	f	class:fasttext::FastText
+start_	fasttext.h	/^  std::chrono::steady_clock::time_point start_;$/;"	m	class:fasttext::FastText
+std_log	model.cc	/^real Model::std_log(real x) const {$/;"	f	class:fasttext::Model
+subwords	dictionary.h	/^  std::vector<int32_t> subwords;$/;"	m	struct:fasttext::entry_type::entry
+supervised	fasttext.cc	/^void FastText::supervised($/;"	f	class:fasttext::FastText
+t	args.h	/^  double t;$/;"	m	class:fasttext::Args
+t_log_	model.h	/^  std::vector<real> t_log_;$/;"	m	class:fasttext::Model
+t_sigmoid_	model.h	/^  std::vector<real> t_sigmoid_;$/;"	m	class:fasttext::Model
+test	fasttext.cc	/^FastText::test(std::istream& in, int32_t k, real threshold) {$/;"	f	class:fasttext::FastText
+test	fasttext.cc	/^void FastText::test(std::istream& in, int32_t k, real threshold, Meter& meter)$/;"	f	class:fasttext::FastText
+test	main.cc	/^void test(const std::vector<std::string>& args) {$/;"	f
+thread	args.h	/^  int thread;$/;"	m	class:fasttext::Args
+threshold	dictionary.cc	/^void Dictionary::threshold(int64_t t, int64_t tl) {$/;"	f	class:fasttext::Dictionary
+train	fasttext.cc	/^void FastText::train(const Args& args) {$/;"	f	class:fasttext::FastText
+train	main.cc	/^void train(const std::vector<std::string> args) {$/;"	f
+train	productquantizer.cc	/^void ProductQuantizer::train(int32_t n, const real* x) {$/;"	f	class:fasttext::ProductQuantizer
+trainThread	fasttext.cc	/^void FastText::trainThread(int32_t threadId) {$/;"	f	class:fasttext::FastText
+tree	model.h	/^  std::vector<Node> tree;$/;"	m	class:fasttext::Model
+type	dictionary.h	/^  entry_type type;$/;"	m	struct:fasttext::entry_type::entry
+uniform	matrix.cc	/^void Matrix::uniform(real a) {$/;"	f	class:fasttext::Matrix
+update	model.cc	/^void Model::update($/;"	f	class:fasttext::Model
+utils	utils.cc	/^namespace utils {$/;"	n	namespace:fasttext	file:
+utils	utils.h	/^namespace utils {$/;"	n	namespace:fasttext
+verbose	args.h	/^  int verbose;$/;"	m	class:fasttext::Args
+version	fasttext.h	/^  int32_t version;$/;"	m	class:fasttext::FastText
+wi_	model.h	/^  std::shared_ptr<Matrix> wi_;$/;"	m	class:fasttext::Model
+wo_	model.h	/^  std::shared_ptr<Matrix> wo_;$/;"	m	class:fasttext::Model
+word	dictionary.h	/^  std::string word;$/;"	m	struct:fasttext::entry_type::entry
+word	dictionary.h	/^enum class entry_type : int8_t { word = 0, label = 1 };$/;"	m	class:fasttext::entry_type
+word2int_	dictionary.h	/^  std::vector<int32_t> word2int_;$/;"	m	class:fasttext::entry_type::Dictionary
+wordNgrams	args.h	/^  int wordNgrams;$/;"	m	class:fasttext::Args
+wordVectors_	fasttext.h	/^  std::unique_ptr<Matrix> wordVectors_;$/;"	m	class:fasttext::FastText
+words_	dictionary.h	/^  std::vector<entry> words_;$/;"	m	class:fasttext::entry_type::Dictionary
+writeGeneralMetrics	meter.cc	/^void Meter::writeGeneralMetrics(std::ostream& out, int32_t k) const {$/;"	f	class:fasttext::Meter
+ws	args.h	/^  int ws;$/;"	m	class:fasttext::Args
+zero	matrix.cc	/^void Matrix::zero() {$/;"	f	class:fasttext::Matrix
+zero	vector.cc	/^void Vector::zero() {$/;"	f	class:fasttext::Vector
