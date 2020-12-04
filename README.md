@@ -9,7 +9,10 @@ For language modeling task (`word_lm` directory):
 - Pytorch version 0.4.0
 
 ## 1 Step
-The word clusters used in this paper are obtained by running [clustercat](https://github.com/jonsafari/clustercat) software on training data. We have uploaded one under `word_clusters` directory. The format is from the output of clustercat, where the first column is word and the second column is cluster ID separated by tab. 
+The word clusters used in this paper are obtained by running [clustercat](https://github.com/jonsafari/clustercat) software on training data. We have uploaded word cluster file under `word_clusters` directory. The format is from the output of clustercat, where the first column is word and the second column is cluster ID separated by tab. Clustercat is easy to install and just download it and compile with `make`. Then run with (clustercat is not included in this repo):
+```
+bin/clustercat --min-count 1 -j 15 --classes $class_num < $input_path > $output_path
+```
 ##
 
 ## 2 Step
