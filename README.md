@@ -80,6 +80,11 @@ In above code, `minCount=5` is set as this is a stronger baseline than `minCount
 we still observed improvements for CBOW with subword information when word clusters used in output.
 
 ## Evaluation on LM
+
+### Dataset
+We used a subset of [lmmrl](http://people.ds.cam.ac.uk/dsg40/lmmrl.html) datasets containing 50 different languages ([Gerz et al., 2018](https://www.aclweb.org/anthology/Q18-1032.pdf)). Currently the download link seems broken and I have uploaded one English and German dataset for testing under 'data' directory.
+
+### Run experiments
 For evaluating the learned word embedding incorporated with word clusters, first go into `word_lm` directory.
 
 To train a standard neural language model with random initialized word embeddings ('Random' column in Table 6 in paper):
