@@ -281,7 +281,7 @@ void Dictionary::initOutWord() {
     // auto it_cluster = word2cluster_.find(words_[i].word);
     std::string out_str = words_[i].word;
     if (it_cluster != word2cluster_.end()) {
-      out_str = word2cluster_.at(words_[i].word);
+      out_str = word2cluster_.at(word);
     }
     // std::string out_str = word2cluster_.at(words_[i].word);
     if (words_[i].count >= args_->freq_thre_out) {
