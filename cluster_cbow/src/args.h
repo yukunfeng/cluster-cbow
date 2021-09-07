@@ -33,6 +33,7 @@ class Args {
   int save_outvec;
   // input word freq threshold
   int freq_thre_in_wd;
+  bool lowersearch_cluster;
   // input cluster freq threshold
   int freq_thre_in_cl;
   int freq_thre_out;

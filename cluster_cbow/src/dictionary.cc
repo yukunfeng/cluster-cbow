@@ -17,6 +17,7 @@
 #include <iterator>
 #include <stdexcept>
 #include <sstream>
+#include <cctype>
 
 namespace fasttext {
 
@@ -271,8 +272,14 @@ void Dictionary::initOutWord() {
   inword2out_.clear();
   std::map<std::string, int32_t> out2id;
   for (int32_t i = 0; i < size_; i++) {
-    auto it_cluster = word2cluster_.find(words_[i].word);
-    std::string out_str = "cluster_0";
+    std::string word = words_[i].word;
+    if (args_->lowersearch_cluster) {
+        std::transform(word.begin(), word.end(), word.begin(),
+                    [](unsigned char c){ return std::tolower(c);  });
+    }
+    auto it_cluster = word2cluster_.find(word);
+    // auto it_cluster = word2cluster_.find(words_[i].word);
+    std::string out_str = words_[i].word;
     if (it_cluster != word2cluster_.end()) {
       out_str = word2cluster_.at(words_[i].word);
     }

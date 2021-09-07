@@ -14,7 +14,6 @@ BuildExt	setup.py	/^class BuildExt(build_ext):$/;"	c
 Button.defaultProps.target	website/pages/en/index.js	/^Button.defaultProps = {$/;"	p
 CXX	Makefile	/^CXX = c++$/;"	m
 CXXFLAGS	Makefile	/^CXXFLAGS = -pthread -std=c++0x -march=native$/;"	m
-Counter	embs/map.py	/^from collections import Counter$/;"	i
 Dictionary	src/dictionary.cc	/^Dictionary::Dictionary(std::shared_ptr<Args> args)$/;"	f	class:fasttext::Dictionary
 Dictionary	src/dictionary.cc	/^Dictionary::Dictionary(std::shared_ptr<Args> args, std::istream& in)$/;"	f	class:fasttext::Dictionary
 Dictionary	src/dictionary.h	/^class Dictionary {$/;"	c	class:fasttext::entry_type
@@ -218,11 +217,11 @@ classfasttext_1_1Model	website/static/docs/en/html/classfasttext_1_1Model.js	/^v
 classfasttext_1_1ProductQuantizer	website/static/docs/en/html/classfasttext_1_1ProductQuantizer.js	/^var classfasttext_1_1ProductQuantizer =$/;"	v
 classfasttext_1_1QMatrix	website/static/docs/en/html/classfasttext_1_1QMatrix.js	/^var classfasttext_1_1QMatrix =$/;"	v
 classfasttext_1_1Vector	website/static/docs/en/html/classfasttext_1_1Vector.js	/^var classfasttext_1_1Vector =$/;"	v
+cluster	src/args.h	/^  std::string cluster;$/;"	m	class:fasttext::Args
 codes	src/model.h	/^  std::vector<std::vector<bool>> codes;$/;"	m	class:fasttext::Model
 codes_	src/qmatrix.h	/^  std::vector<uint8_t> codes_;$/;"	m	class:fasttext::QMatrix
 codesize_	src/qmatrix.h	/^  int32_t codesize_;$/;"	m	class:fasttext::QMatrix
 collections	alignment/utils.py	/^import collections$/;"	i
-collections	embs/map.py	/^import collections$/;"	i
 cols	src/matrix.h	/^  inline int64_t cols() const {$/;"	f	class:fasttext::Matrix
 comparePairs	src/fasttext.cc	/^bool comparePairs($/;"	f	namespace:fasttext
 comparePairs	src/model.cc	/^bool Model::comparePairs($/;"	f	class:fasttext::Model
@@ -332,7 +331,6 @@ errno	python/doc/examples/bin_to_vec.py	/^import errno$/;"	i
 errno	python/doc/examples/get_vocab.py	/^import errno$/;"	i
 expandNode	website/static/docs/en/html/navtree.js	/^function expandNode(o, node, imm, showRoot)$/;"	f
 ext_modules	setup.py	/^ext_modules = [$/;"	v
-extra_params	embs/map.py	/^        extra_params = sys.argv[1:]$/;"	v
 f	python/doc/examples/bin_to_vec.py	/^    f = load_model(args.model)$/;"	v
 f	python/doc/examples/get_vocab.py	/^    f = load_model(args.model)$/;"	v
 f1Score	src/meter.cc	/^double Meter::f1Score(int32_t i) {$/;"	f	class:fasttext::Meter
@@ -364,9 +362,6 @@ fasttext_8h	website/static/docs/en/html/fasttext_8h.js	/^var fasttext_8h =$/;"	v
 fasttext_src_cc	setup.py	/^fasttext_src_cc = list($/;"	v
 fasttext_src_cc	setup.py	/^fasttext_src_cc = list(filter(lambda x: x.endswith('.cc'), fasttext_src_files))$/;"	v
 fasttext_src_files	setup.py	/^fasttext_src_files = map(str, os.listdir(FASTTEXT_SRC))$/;"	v
-fh	embs/map.py	/^            fh = open(file_path, 'r')$/;"	v
-fh	embs/map.py	/^        fh = sys.stdin$/;"	v
-fh_list	embs/map.py	/^    fh_list = []$/;"	v
 files	website/static/docs/en/html/dir_68267d1309a1af8e8297ef4c3efbcdba.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="files"><\/a>$/;"	a
 files	website/static/docs/en/html/files.js	/^var files =$/;"	v
 fin	eval.py	/^fin = open(args.dataPath, 'rb')$/;"	v
@@ -379,6 +374,9 @@ find_nearest_neighbor	python/fastText/util/__init__.py	/^from .util import find_
 find_nearest_neighbor	python/fastText/util/util.py	/^def find_nearest_neighbor(query, vectors, ban_set, cossims=None):$/;"	f
 flickr_job	python/fastText/tests/test_configurations.py	/^def flickr_job(thread=None):$/;"	f
 forward	python/doc/examples/FastTextEmbeddingBag.py	/^    def forward(self, words):$/;"	m	class:FastTextEmbeddingBag
+freq_thre_in_cl	src/args.h	/^  int freq_thre_in_cl;$/;"	m	class:fasttext::Args
+freq_thre_in_wd	src/args.h	/^  int freq_thre_in_wd;$/;"	m	class:fasttext::Args
+freq_thre_out	src/args.h	/^  int freq_thre_out;$/;"	m	class:fasttext::Args
 ft	python/fastText/FastText.py	/^    ft = _FastText()$/;"	v
 ft_emb	python/doc/examples/FastTextEmbeddingBag.py	/^    ft_emb = FastTextEmbeddingBag("fil9.bin")$/;"	v
 ft_word_emb	python/doc/examples/FastTextEmbeddingBag.py	/^            ft_word_emb = model.get_word_vector(word)$/;"	v
@@ -391,8 +389,6 @@ func-members	website/static/docs/en/html/utils_8h.html	/^<tr class="heading"><td
 func-members	website/static/docs/en/html/vector_8cc.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"><\/a>$/;"	a
 func-members	website/static/docs/en/html/vector_8h.html	/^<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"><\/a>$/;"	a
 functions_dup	website/static/docs/en/html/functions_dup.js	/^var functions_dup =$/;"	v
-gen_out	run_nmt.sh	/^function gen_out() {$/;"	f
-gen_out	run_short_lang.sh	/^function gen_out() {$/;"	f
 gen_sup_test	python/fastText/tests/test_script.py	/^def gen_sup_test(configuration, data_dir):$/;"	f
 gen_test_get_vector	python/fastText/tests/test_script.py	/^    def gen_test_get_vector(self, kwargs):$/;"	m	class:TestFastTextUnitPy
 gen_test_multi_get_line	python/fastText/tests/test_script.py	/^    def gen_test_multi_get_line(self, kwargs):$/;"	m	class:TestFastTextUnitPy
@@ -438,6 +434,7 @@ getNN	src/fasttext.cc	/^std::vector<std::pair<real, std::string>> FastText::getN
 getNegative	src/model.cc	/^int32_t Model::getNegative(int32_t target) {$/;"	f	class:fasttext::Model
 getNgramVectors	src/fasttext.cc	/^std::vector<std::pair<std::string, Vector>> FastText::getNgramVectors($/;"	f	class:fasttext::FastText
 getNode	website/static/docs/en/html/navtree.js	/^function getNode(o, po)$/;"	f
+getOutCounts	src/dictionary.cc	/^std::vector<int64_t> Dictionary::getOutCounts() const {$/;"	f	class:fasttext::Dictionary
 getOutputMatrix	src/fasttext.cc	/^std::shared_ptr<const Matrix> FastText::getOutputMatrix() const {$/;"	f	class:fasttext::FastText
 getScript	website/static/docs/en/html/navtree.js	/^function getScript(scriptName,func,show)$/;"	f
 getSentenceVector	src/fasttext.cc	/^void FastText::getSentenceVector(std::istream& in, fasttext::Vector& svec) {$/;"	f	class:fasttext::FastText
@@ -542,6 +539,7 @@ initMenu	website/static/docs/en/html/menu.js	/^function initMenu(relPath,searchE
 initMenu.makeTree	website/static/docs/en/html/menu.js	/^  function makeTree(data,relPath) {$/;"	f
 initNavTree	website/static/docs/en/html/navtree.js	/^function initNavTree(toroot,relpath)$/;"	f
 initNgrams	src/dictionary.cc	/^void Dictionary::initNgrams() {$/;"	f	class:fasttext::Dictionary
+initOutWord	src/dictionary.cc	/^void Dictionary::initOutWord() {$/;"	f	class:fasttext::Dictionary
 initResizable	website/static/docs/en/html/resize.js	/^function initResizable()$/;"	f
 initResizable.collapseExpand	website/static/docs/en/html/resize.js	/^  function collapseExpand()$/;"	f
 initResizable.readCookie	website/static/docs/en/html/resize.js	/^  function readCookie(cookie)$/;"	f
@@ -555,6 +553,7 @@ initTableNegatives	src/model.cc	/^void Model::initTableNegatives(const std::vect
 init_search	website/static/docs/en/html/search/search.js	/^function init_search()$/;"	f
 input	src/args.h	/^  std::string input;$/;"	m	class:fasttext::Args
 input_	src/fasttext.h	/^  std::shared_ptr<Matrix> input_;$/;"	m	class:fasttext::FastText
+inword2out_	src/dictionary.h	/^  std::vector<int32_t> inword2out_;$/;"	m	class:fasttext::entry_type::Dictionary
 io	alignment/eval.py	/^import io$/;"	i
 io	alignment/utils.py	/^import io$/;"	i
 isPruned	src/dictionary.h	/^  bool isPruned() {$/;"	f	class:fasttext::entry_type::Dictionary
@@ -593,7 +592,6 @@ letter_n	website/static/docs/en/html/classes.html	/^<tr><td rowspan="2" valign="
 letter_p	website/static/docs/en/html/classes.html	/^<\/td><td rowspan="2" valign="bottom"><a name="letter_p"><\/a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;p&#160;&#160;<\/div><\/td><\/tr><\/table>$/;"	a
 letter_q	website/static/docs/en/html/classes.html	/^<\/td><td valign="top"><a class="el" href="classfasttext_1_1Model.html">Model<\/a> (<a class="el" href="namespacefasttext.html">fasttext<\/a>)&#160;&#160;&#160;<\/td><td rowspan="2" valign="bottom"><a name="letter_q"><\/a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;q&#160;&#160;<\/div><\/td><\/tr><\/table>$/;"	a
 letter_v	website/static/docs/en/html/classes.html	/^<\/td><td rowspan="2" valign="bottom"><a name="letter_v"><\/a><table border="0" cellspacing="0" cellpadding="0"><tr><td><div class="ah">&#160;&#160;v&#160;&#160;<\/div><\/td><\/tr><\/table>$/;"	a
-line	embs/map.py	/^            line = line.strip()$/;"	v
 line	python/fastText/tests/test_script.py	/^        line = " ".join(line)$/;"	v
 line	python/fastText/tests/test_script.py	/^        line = []$/;"	v
 line_length	python/fastText/tests/test_script.py	/^        line_length = random.randint(min_words_line, max_words_line)$/;"	v
@@ -659,7 +657,6 @@ mulcode	src/productquantizer.cc	/^real ProductQuantizer::mulcode($/;"	f	class:fa
 multiplyRow	src/matrix.cc	/^void Matrix::multiplyRow(const Vector& nums, int64_t ib, int64_t ie) {$/;"	f	class:fasttext::Matrix
 multiprocessing	python/fastText/FastText.py	/^import multiprocessing$/;"	i
 multiprocessing	python/fastText/tests/test_configurations.py	/^import multiprocessing$/;"	i
-myshuf	.circleci/pull_data.sh	/^myshuf() {$/;"	f
 myshuf	classification-example.sh	/^myshuf() {$/;"	f
 myshuf	classification-results.sh	/^myshuf() {$/;"	f
 myshuf	quantization-example.sh	/^myshuf() {$/;"	f
@@ -721,16 +718,15 @@ node.getChildrenUL	website/static/docs/en/html/navtree.js	/^  node.childrenUL = 
 noexcept	src/vector.h	/^  Vector(Vector&&) noexcept;$/;"	m	class:fasttext::Vector
 norm	src/vector.cc	/^real Vector::norm() const {$/;"	f	class:fasttext::Vector
 norm_codes_	src/qmatrix.h	/^  std::vector<uint8_t> norm_codes_;$/;"	m	class:fasttext::QMatrix
-normalize_text	.circleci/pull_data.sh	/^normalize_text() {$/;"	f
 normalize_text	classification-example.sh	/^normalize_text() {$/;"	f
 normalize_text	classification-results.sh	/^normalize_text() {$/;"	f
 normalize_text	get-wikimedia.sh	/^normalize_text() {$/;"	f
 normalize_text	quantization-example.sh	/^normalize_text() {$/;"	f
 normalize_text	tests/fetch_test_data.sh	/^normalize_text() {$/;"	f
+noutwords	src/dictionary.cc	/^int32_t Dictionary::noutwords() const {$/;"	f	class:fasttext::Dictionary
 np	alignment/align.py	/^import numpy as np$/;"	i
 np	alignment/eval.py	/^import numpy as np$/;"	i
 np	alignment/utils.py	/^import numpy as np$/;"	i
-np	embs/map.py	/^import numpy as np$/;"	i
 np	eval.py	/^import numpy as np$/;"	i
 np	python/doc/examples/FastTextEmbeddingBag.py	/^import numpy as np$/;"	i
 np	python/doc/examples/compute_accuracy.py	/^import numpy as np$/;"	i
@@ -754,13 +750,13 @@ operator <<	src/vector.cc	/^std::ostream& operator<<(std::ostream& os, const Vec
 operator =	src/vector.cc	/^Vector& Vector::operator=(Vector&& other) {$/;"	f	class:fasttext::Vector
 operator []	src/vector.h	/^  inline const real& operator[](int64_t i) const {$/;"	f	class:fasttext::Vector
 operator []	src/vector.h	/^  inline real& operator[](int64_t i) {$/;"	f	class:fasttext::Vector
-os	embs/map.py	/^import os$/;"	i
 os	eval.py	/^import os$/;"	i
 os	python/doc/examples/train_supervised.py	/^import os$/;"	i
 os	python/doc/examples/train_unsupervised.py	/^import os$/;"	i
 os	python/fastText/tests/test_script.py	/^import os$/;"	i
 os	setup.py	/^import os$/;"	i
 osz_	src/model.h	/^  int32_t osz_;$/;"	m	class:fasttext::Model
+out2count_	src/dictionary.h	/^  std::vector<int64_t> out2count_;$/;"	m	class:fasttext::entry_type::Dictionary
 output	src/args.h	/^  std::string output;$/;"	m	class:fasttext::Args
 output_	src/fasttext.h	/^  std::shared_ptr<Matrix> output_;$/;"	m	class:fasttext::FastText
 output_	src/model.h	/^  Vector output_;$/;"	m	class:fasttext::Model
@@ -892,8 +888,8 @@ random	python/fastText/tests/test_script.py	/^import random$/;"	i
 random_word	python/doc/examples/FastTextEmbeddingBag.py	/^def random_word(N):$/;"	f
 random_words	python/fastText/tests/test_script.py	/^    random_words = get_random_words($/;"	v
 rcsls	alignment/align.py	/^def rcsls(X_src, Y_tgt, Z_src, Z_tgt, R, knn=10):$/;"	f
-re	embs/map.py	/^import re$/;"	i
 readCluster	cpp_test/tmp.cpp	/^void readCluster(std::istream& in) {$/;"	f
+readCluster	src/dictionary.cc	/^void Dictionary::readCluster(std::istream& in) {$/;"	f	class:fasttext::Dictionary
 readFromFile	src/dictionary.cc	/^void Dictionary::readFromFile(std::istream& in) {$/;"	f	class:fasttext::Dictionary
 readWord	scripts/kbcompletion/eval.cpp	/^bool readWord(std::istream& in, std::string& word)$/;"	f
 readWord	src/dictionary.cc	/^bool Dictionary::readWord(std::istream& in, std::string& word) const {$/;"	f	class:fasttext::Dictionary
@@ -920,6 +916,7 @@ save	src/productquantizer.cc	/^void ProductQuantizer::save(std::ostream& out) {$
 save	src/qmatrix.cc	/^void QMatrix::save(std::ostream& out) {$/;"	f	class:fasttext::QMatrix
 saveModel	src/fasttext.cc	/^void FastText::saveModel() {$/;"	f	class:fasttext::FastText
 saveModel	src/fasttext.cc	/^void FastText::saveModel(const std::string& filename) {$/;"	f	class:fasttext::FastText
+saveOutVectors	src/fasttext.cc	/^void FastText::saveOutVectors(const std::string& filename) {$/;"	f	class:fasttext::FastText
 saveOutput	src/args.h	/^  bool saveOutput;$/;"	m	class:fasttext::Args
 saveOutput	src/fasttext.cc	/^void FastText::saveOutput() {$/;"	f	class:fasttext::FastText
 saveOutput	src/fasttext.cc	/^void FastText::saveOutput(const std::string& filename) {$/;"	f	class:fasttext::FastText
@@ -927,6 +924,7 @@ saveVectors	src/fasttext.cc	/^void FastText::saveVectors() {$/;"	f	class:fasttex
 saveVectors	src/fasttext.cc	/^void FastText::saveVectors(const std::string& filename) {$/;"	f	class:fasttext::FastText
 save_matrix	alignment/utils.py	/^def save_matrix(fname, x):$/;"	f
 save_model	python/fastText/FastText.py	/^    def save_model(self, path):$/;"	m	class:_FastText
+save_outvec	src/args.h	/^  int save_outvec;$/;"	m	class:fasttext::Args
 save_vectors	alignment/utils.py	/^def save_vectors(fname, x, words):$/;"	f
 script.onreadystatechange	website/static/docs/en/html/navtree.js	/^  if ($.browser.msie && $.browser.version<=8) {$/;"	f
 searchData	website/static/docs/en/html/search/all_0.js	/^var searchData=$/;"	v
@@ -1065,7 +1063,6 @@ stats	eval.py	/^from scipy import stats$/;"	i
 stats	python/doc/examples/train_unsupervised.py	/^from scipy import stats$/;"	i
 std_log	src/model.cc	/^real Model::std_log(real x) const {$/;"	f	class:fasttext::Model
 storeLink	website/static/docs/en/html/navtree.js	/^function storeLink(link)$/;"	f
-string	embs/map.py	/^import string$/;"	i
 string	python/doc/examples/FastTextEmbeddingBag.py	/^import string$/;"	i
 stripPath	website/static/docs/en/html/navtree.js	/^function stripPath(uri)$/;"	f
 stripPath2	website/static/docs/en/html/navtree.js	/^function stripPath2(uri)$/;"	f
@@ -1076,7 +1073,6 @@ subprocess	setup.py	/^import subprocess$/;"	i
 subwords	src/dictionary.h	/^  std::vector<int32_t> subwords;$/;"	m	struct:fasttext::entry_type::entry
 sup_test	python/fastText/tests/test_script.py	/^    def sup_test(self):$/;"	f	function:gen_sup_test
 supervised	src/fasttext.cc	/^void FastText::supervised($/;"	f	class:fasttext::FastText
-sys	embs/map.py	/^import sys$/;"	i
 sys	python/benchmarks/get_word_vector.py	/^import sys$/;"	i
 sys	python/fastText/tests/test_script.py	/^import sys$/;"	i
 sys	setup.py	/^import sys$/;"	i
@@ -1170,13 +1166,13 @@ version	src/fasttext.h	/^  int32_t version;$/;"	m	class:fasttext::FastText
 vstr	python/doc/examples/bin_to_vec.py	/^        vstr = ""$/;"	v
 wi_	src/model.h	/^  std::shared_ptr<Matrix> wi_;$/;"	m	class:fasttext::Model
 wo_	src/model.h	/^  std::shared_ptr<Matrix> wo_;$/;"	m	class:fasttext::Model
-word	embs/map.py	/^            word = line.split()[0]$/;"	v
 word	eval.py	/^        word = tab[0]$/;"	v
 word	python/doc/examples/FastTextEmbeddingBag.py	/^            word = words[i]$/;"	v
 word	src/dictionary.h	/^  std::string word;$/;"	m	struct:fasttext::entry_type::entry
 word	src/dictionary.h	/^enum class entry_type : int8_t { word = 0, label = 1 };$/;"	m	class:fasttext::entry_type
 word1	eval.py	/^    word1 = tline[0].lower()$/;"	v
 word2	eval.py	/^    word2 = tline[1].lower()$/;"	v
+word2cluster_	src/dictionary.h	/^  std::map<std::string, std::string> word2cluster_;$/;"	m	class:fasttext::entry_type::Dictionary
 word2int_	src/dictionary.h	/^  std::vector<int32_t> word2int_;$/;"	m	class:fasttext::entry_type::Dictionary
 wordNgrams	src/args.h	/^  int wordNgrams;$/;"	m	class:fasttext::Args
 wordVectors_	src/fasttext.h	/^  std::unique_ptr<Matrix> wordVectors_;$/;"	m	class:fasttext::FastText

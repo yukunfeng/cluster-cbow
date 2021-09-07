@@ -23,6 +23,7 @@ Args::Args() {
   minCount = 5;
   minCountLabel = 0;
   freq_thre_in_wd = 1;
+  lowersearch_cluster = false;
   save_outvec = 0;
   freq_thre_in_cl = 1;
   freq_thre_out = 1;
@@ -171,6 +172,9 @@ void Args::parseArgs(const std::vector<std::string>& args) {
       } else if (args[ai] == "-saveOutput") {
         saveOutput = true;
         ai--;
+      } else if (args[ai] == "-lowersearch_cluster") {
+        lowersearch_cluster = true;
+        ai--;
       } else if (args[ai] == "-qnorm") {
         qnorm = true;
         ai--;
@@ -219,8 +223,9 @@ void Args::printBasicHelp() {
             << "\nThe following arguments are optional:\n"
             << "  -cluster            cluster file path\n"
             << "  -freq_thre_in_wd    freq_threshold of input word\n"
+            << "  -lowersearch_cluster search cluster of lowercased word (word itself not changed)\n"
             << "  -freq_thre_in_cl    freq_threshold of input \n"
-            << "  -freq_thre_out      freq_threshold of out word\n"
+            << "  -freq_thre_out      at least this number of times for out word\n"
             << "  -save_outvec        1 for saving outvec\n"
             << "  -verbose            verbosity level [" << verbose << "]\n";
 }
