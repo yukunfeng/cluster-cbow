@@ -2,25 +2,24 @@ set -x
 
 log="log"
 
-lang=de
-data_path="../data/$lang"
+data_path="/home/lr/yukun/common_corpus/data/50lm/en"
 
 # word-lm with random initialized word embeddings.
-# 'Random' column in Table 6 in paper.
-# python -u main.py --tied  --data $data_path --epoch 40 --emsize 200  >> $log
+# Random word embeddings
+# python -u main.py --tied  --data $data_path --epoch 40 --emsize 300  >> $log
 
-# word-lm with word embeddings trained from standard CBOW without cluster.
-# 'CBOW' column in Table 6 in paper.
-# python -u main.py --input_emb_path "../cluster_cbow/$lang.no.cluster.emb" --tied  --data $data_path --epoch 40 --emsize 200  >> $log
+# word-lm with word embeddings trained from standard subword-CBOW without cluster.
+# cluster=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.fasttext.emb
+# python -u main.py --input_emb_path $cluster --tied  --data $data_path --epoch 40 --emsize 300  >> $log
 
-# word-lm with word embeddings trained from cluster-incorporated CBOW.
-# 'Cluster-CBOW' column in Table 6 in paper.
-# python -u main.py --input_emb_path "../cluster_cbow/$lang.cluster.emb" --tied  --data $data_path --epoch 40 --emsize 200  >> $log
-
-# word-lm with word embeddings trained from cluster-incorporated CBOW only for input.
-# Table 8 in paper.
-# python -u main.py --input_emb_path "../cluster_cbow/$lang.cluster.input.emb" --tied  --data $data_path --epoch 40 --emsize 200  >> $log
+# word-lm with word embeddings trained from standard subword-CBOW without cluster.
+cluster=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.emb
+python -u main.py --input_emb_path $cluster --tied  --data $data_path --epoch 40 --emsize 300  >> $log
 
 # word-lm with word embeddings trained from cluster-incorporated CBOW only for output.
-# Table 8 in paper.
-# python -u main.py --input_emb_path "../cluster_cbow/$lang.cluster.output.emb" --tied  --data $data_path --epoch 40 --emsize 200  >> $log
+# cluster=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.outfreq100.emb
+# python -u main.py --input_emb_path $cluster --tied  --data $data_path --epoch 40 --emsize 300  >> $log
+
+# word-lm with word embeddings trained from cluster-incorporated CBOW only for output.
+# cluster=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.outfreq50.emb
+# python -u main.py --input_emb_path $cluster --tied  --data $data_path --epoch 40 --emsize 300  >> $log
