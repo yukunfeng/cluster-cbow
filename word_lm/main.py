@@ -153,7 +153,7 @@ model = model.RNNModel(args.model, ntokens, args.emsize, args.nhid, args.nlayers
 # Load emb
 if args.input_emb_path is not None and args.input_emb_path != "None":
     input_emb_path = os.path.expanduser(args.input_emb_path)
-    emb_model = load_word_emb(input_emb_path, emb_format)
+    emb_model = load_word_emb(input_emb_path, args.emb_format)
     found = 0
     for i in range(len(corpus.dictionary)):
         word = corpus.dictionary.idx2word[i]
@@ -165,7 +165,7 @@ if args.input_emb_path is not None and args.input_emb_path != "None":
             if not args.tied:
                 model.decoder.weight.data[i] = word_emb
     found_rate = found / len(corpus.dictionary)
-    print("Finishing to load emb from {input_emb_path}, {found}/{len(corpus.dictionary)}={found_rate * 100:.2f}")
+    print(f"Finishing to load emb from {input_emb_path}, {found}/{len(corpus.dictionary)}={found_rate * 100:.2f}")
     import ipdb; ipdb.set_trace()
 
 criterion = nn.CrossEntropyLoss()
