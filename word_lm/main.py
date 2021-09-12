@@ -10,6 +10,7 @@ import torchtext
 
 import data
 import model
+from word_emb import load_word_emb
 
 parser = argparse.ArgumentParser(description='PyTorch Wikitext-2 RNN/LSTM Language Model')
 parser.add_argument('--data', type=str, default='./data/wikitext-2',
@@ -48,8 +49,8 @@ parser.add_argument('--onnx-export', type=str, default='',
                     help='path to export the final model in onnx format')
 parser.add_argument('--input_emb_path', type=str, default=None,
                     help='path of input emb')
-parser.add_argument('--init_emb_pos', type=str, default="both",
-                    help='in|out|both')
+parser.add_argument('--emb_format', type=str, default='fasttext',
+                    help='format of emb, fasttext or word2vec (for word2vec, bin or txt will be inferred from file name)')
 parser.add_argument('--verbose_test_file', type=str, default=None,
                     help='path of output emb')
 args = parser.parse_args()
@@ -100,32 +101,33 @@ print(f"vocab: {len(corpus.dictionary.idx2word)}")
 ##########################
 
 # This code just loads word embs but is redundant due to historical reasons.
-if args.input_emb_path is not None and args.input_emb_path != "None":
-    print("start to load outemb")
-    input_emb_path = os.path.expanduser(args.input_emb_path)
-    os.system(f"rm -f {input_emb_path}.pt")
-    head, tail = os.path.split(input_emb_path)
-    torchtext_vectors = torchtext.vocab.Vectors(name=tail, cache=head)
-    torchtext_vectors.vectors.to(device)
-    ttword_index_list = []
-    for i in range(len(corpus.dictionary)):
-        word = corpus.dictionary.idx2word[i]
-        if word not in torchtext_vectors.stoi:
-            word = "</s>"
-        torchtext_vec_index = torchtext_vectors.stoi[word]
-        ttword_index_list.append(torchtext_vec_index)
-    ttword_index_list = torch.tensor(ttword_index_list)
-    outemb = torch.index_select(
-        torchtext_vectors.vectors, 0, ttword_index_list
-    )
-    # turn back unk to random vectors if it's not in pretrained emb
-    if "<unk>" not in torchtext_vectors.stoi:
-        unk_idx = corpus.dictionary.word2idx["<unk>"]
-        #  outemb[unk_idx].zero_()
-        outemb[unk_idx].uniform_(-0.1, 0.1)
+#  if args.input_emb_path is not None and args.input_emb_path != "None":
+    #  print("start to load outemb")
+    #  input_emb_path = os.path.expanduser(args.input_emb_path)
+    #  os.system(f"rm -f {input_emb_path}.pt")
+    #  head, tail = os.path.split(input_emb_path)
+    #  torchtext_vectors = torchtext.vocab.Vectors(name=tail, cache=head)
+    #  torchtext_vectors.vectors.to(device)
+    #  ttword_index_list = []
+    #  for i in range(len(corpus.dictionary)):
+        #  word = corpus.dictionary.idx2word[i]
+        #  if word not in torchtext_vectors.stoi:
+            #  word = "</s>"
+        #  torchtext_vec_index = torchtext_vectors.stoi[word]
+        #  ttword_index_list.append(torchtext_vec_index)
+    #  ttword_index_list = torch.tensor(ttword_index_list)
+    #  outemb = torch.index_select(
+        #  torchtext_vectors.vectors, 0, ttword_index_list
+    #  )
+    ##  turn back unk to random vectors if it's not in pretrained emb
+    #  if "<unk>" not in torchtext_vectors.stoi:
+        #  unk_idx = corpus.dictionary.word2idx["<unk>"]
+        ##  outemb[unk_idx].zero_()
+        #  outemb[unk_idx].uniform_(-0.1, 0.1)
 
-    os.system(f"rm -f {input_emb_path}.pt")
-    print(f"finish to load outemb, size: {outemb.size()}")
+    #  os.system(f"rm -f {input_emb_path}.pt")
+    #  print(f"finish to load outemb, size: {outemb.size()}")
+
 
 def batchify(data, bsz):
     # Work out how cleanly we can divide the dataset into bsz parts.
@@ -148,18 +150,23 @@ test_data = batchify(corpus.test, eval_batch_size)
 ntokens = len(corpus.dictionary)
 model = model.RNNModel(args.model, ntokens, args.emsize, args.nhid, args.nlayers, args.dropout, args.tied).to(device)
 
-# assigin pre emb
+# Load emb
 if args.input_emb_path is not None and args.input_emb_path != "None":
-    if args.init_emb_pos == 'in':
-        print("init input emb")
-        model.encoder.weight.data.copy_(outemb)
-    elif args.init_emb_pos == 'out':
-        print("init output emb")
-        model.decoder.weight.data.copy_(outemb)
-    else:
-        print("init both emb")
-        model.encoder.weight.data.copy_(outemb)
-        model.decoder.weight.data.copy_(outemb)
+    input_emb_path = os.path.expanduser(args.input_emb_path)
+    emb_model = load_word_emb(input_emb_path, emb_format)
+    found = 0
+    for i in range(len(corpus.dictionary)):
+        word = corpus.dictionary.idx2word[i]
+        if word in emb_model:
+            found += 1
+            word_emb = torch.from_numpy(emb_model[word])
+            # Assign to model's lookup table
+            model.encoder.weight.data[i] = word_emb
+            if not args.tied:
+                model.decoder.weight.data[i] = word_emb
+    found_rate = found / len(corpus.dictionary)
+    print("Finishing to load emb from {input_emb_path}, {found}/{len(corpus.dictionary)}={found_rate * 100:.2f}")
+    import ipdb; ipdb.set_trace()
 
 criterion = nn.CrossEntropyLoss()
 
