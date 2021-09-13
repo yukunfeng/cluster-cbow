@@ -100,5 +100,4 @@ if __name__ == "__main__":
     'format of emb, fasttext or word2vec (for word2vec, bin or txt will be inferred from file name)'
   )
   args = parser.parse_args()
-  res = emb_eval(args)
-  print(res)
+  emb_eval(args)
