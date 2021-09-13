@@ -7,8 +7,8 @@ from word_emb import load_word_emb
 WORDSIM_DATA_PATHS = [
     "/home/lr/yukun/common_corpus/data/embedding-evaluation/wordsim/data/en/EN-WS-353-ALL.txt",
     "/home/lr/yukun/common_corpus/data/embedding-evaluation/wordsim/data/en/EN-RW-STANFORD.txt",
-    #  "/home/lr/yukun/common_corpus/data/embedding-evaluation/wordsim/data/en/EN-MEN-TR-3k.txt",
-    #  "/home/lr/yukun/common_corpus/data/embedding-evaluation/wordsim/data/en/EN-MTurk-771.txt"
+    "/home/lr/yukun/common_corpus/data/embedding-evaluation/wordsim/data/en/EN-MEN-TR-3k.tab.txt",
+    "/home/lr/yukun/common_corpus/data/embedding-evaluation/wordsim/data/en/EN-MTurk-771.tab.txt"
     ]
 
 ANALOGY_DATA_PATHS = [
