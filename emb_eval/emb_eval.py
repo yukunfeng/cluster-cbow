@@ -55,13 +55,22 @@ def use_fasttext_computed_model(args, model):
     word_list = list(word_list)
 
   tmp_txt_model = f"tmp_word_emb.txt"
+  unseen = []
+  word_emb_strs = []
+  for word in word_list:
+    if word in model:
+      word_emb = model[word]
+      word_emb_str = " ".join(word_emb.astype(str))
+      word_emb_str = f"{word} {word_emb_str}"
+      word_emb_strs.append(word_emb_str)
+    else:
+      unseen.append(word)
+  print(f"Unsee words: {len(unseen)}/{len(word_list)}, some are: {unseen[0:20]}")
+
   with open(tmp_txt_model, 'w') as fh:
-    fh.write(f"{len(word_list)} {model.vector_size}\n")
-    for word in word_list:
-      if word in model:
-        word_emb = model[word]
-        word_emb_str = " ".join(word_emb.astype(str))
-        fh.write(f"{word} {word_emb_str}\n")
+    fh.write(f"{len(word_emb_strs)} {model.vector_size}\n")
+    for word_emb_str in word_emb_strs:
+      fh.write(f"{word_emb_str}\n")
   from gensim.models import KeyedVectors
   model = KeyedVectors.load_word2vec_format(tmp_txt_model, binary=False)
   import os
@@ -84,6 +93,8 @@ def emb_eval(args):
     #  analogy_scores = model.wv.accuracy(task_data_path)
     analogy_scores = model.wv.evaluate_word_analogies(task_data_path)
     print(f"{task_data_path}: \n{analogy_scores[0]}")
+  print(f"Finishing evaluating {args.input_emb_path}...")
+  print("")
 
 if __name__ == "__main__":
   parser = argparse.ArgumentParser(

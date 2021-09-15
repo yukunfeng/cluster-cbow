@@ -166,7 +166,6 @@ if args.input_emb_path is not None and args.input_emb_path != "None":
                 model.decoder.weight.data[i] = word_emb
     found_rate = found / len(corpus.dictionary)
     print(f"Finishing to load emb from {input_emb_path}, {found}/{len(corpus.dictionary)}={found_rate * 100:.2f}")
-    import ipdb; ipdb.set_trace()
 
 criterion = nn.CrossEntropyLoss()
 
