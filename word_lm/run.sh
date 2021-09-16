@@ -21,16 +21,19 @@ data_path="/home/lr/yukun/common_corpus/data/50lm/en"
 # python -u main.py --input_emb_path $emb_path --emb_format fasttext --tied --data $data_path --epoch 40 --emsize 300 >> $log
 
 # cluster_nums=(3425 10286 20555)
-cluster_nums=(20555)
-for cluster_num in "${cluster_nums[@]}"
-do
-    emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.outfreq18.cluster${cluster_num}.emb.bin
-    python -u main.py --input_emb_path $emb_path --emb_format fasttext --tied --data $data_path --epoch 40 --emsize 300 >> $log
+# cluster_nums=(20555)
+# for cluster_num in "${cluster_nums[@]}"
+# do
+    # emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.outfreq18.cluster${cluster_num}.emb.bin
+    # python -u main.py --input_emb_path $emb_path --emb_format fasttext --tied --data $data_path --epoch 40 --emsize 300 >> $log
     # emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.outfreq50.cluster${cluster_num}.emb.bin
     # python -u main.py --input_emb_path $emb_path --emb_format fasttext --tied --data $data_path --epoch 40 --emsize 300 >> $log
-done
+# done
 
-emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.emb
+# emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.emb
+# python -u main.py --input_emb_path $emb_path --emb_format fasttext --tied --data $data_path --epoch 40 --emsize 300 >> $log
+
+emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.minc20.emb.bin
 python -u main.py --input_emb_path $emb_path --emb_format fasttext --tied --data $data_path --epoch 40 --emsize 300 >> $log
 
 # word-lm with random initialized word embeddings.

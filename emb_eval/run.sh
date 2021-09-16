@@ -23,5 +23,8 @@ set -x
 # emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.outfreq18.cluster20555.emb.bin
 # python ./emb_eval.py --input_emb_path $emb_path --emb_format 'fasttext'
 
-emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.emb
+# emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.emb
+# python ./emb_eval.py --input_emb_path $emb_path --emb_format 'fasttext'
+
+emb_path=/home/lr/yukun/large_scale_corpus/preprocessed_wiki.txt.no_rare.txt.shuf.fasttext.minc20.emb.bin
 python ./emb_eval.py --input_emb_path $emb_path --emb_format 'fasttext'
